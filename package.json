@@ -1,19 +1,25 @@
 {
-  "name": "graveyard_scrape",
-  "version": "1.0.0",
-  "description": "",
+  "name": "graveyard-scrape",
+  "version": "1.0.1",
+  "description": "Gets graveyard data from realmeye for a specified player",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "rotmg",
+    "scrape"
+  ],
+  "author": "ynx0",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "lodash": "^4.17.10",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
     "signale": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ynx0/graveyard_scrape"
   }
 }
