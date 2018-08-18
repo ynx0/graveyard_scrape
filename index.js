@@ -33,13 +33,14 @@ function parseData(el, type, $) {
 // todo add input sanitization
 async function scrapeGraveyard(playerName, maxResults = 10) {
 	let url = cfg.API_ENDPOINT + playerName;
-	signale.info("Url is" + url);
+	signale.debug("Url is: " + url);
 	if (maxResults > 100) {
 		signale.warn(
 			"Currently, max number of results is 100...Clamping Value"
 		);
 		maxResults = 100;
 	}
+	signale.info(`Fetching ${maxResults} results`);
 	return new Promise((resolve, reject) => {
 		request(
 			{
