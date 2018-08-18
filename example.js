@@ -1,4 +1,4 @@
 const scrapeGraveyard = require('./index')
 
-scrapeGraveyard('droidmxbro').
+scrapeGraveyard('droidmxbro', 2).
 	then(graves => console.log(graves))
