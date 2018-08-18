@@ -53,6 +53,12 @@ async function scrapeGraveyard(playerName, maxResults = 10) {
 				if (!err && res.statusCode == 200) {
 					signale.success("Successfully loaded graveyard page");
 					var $ = cheerio.load(body);
+
+					// safety check to see if graveyard is hidden
+					if($("body > div.container > div > div > h3").text().contains("hidden")) {
+						reject(new Error("Graveyard is hidden"))
+					}
+
 					let allEls = []; // stores cheerio stuff
 					let graves = [];
 					let raw_data = [[]];
