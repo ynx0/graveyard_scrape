@@ -1,6 +1,6 @@
 "use strict";
 import test from "ava";
-const scrape = require("./index.js");
+const scrape = require("./index.js").scrapeGraveyard;
 
 test("Valid data has been received", t => {
 	t.truthy(scrape("droidmxbro"));

@@ -117,4 +117,6 @@ async function scrapeGraveyard(playerName, maxResults = 10) {
 	});
 }
 
-module.exports = scrapeGraveyard;
+module.exports = {
+	scrapeGraveyard
+};
